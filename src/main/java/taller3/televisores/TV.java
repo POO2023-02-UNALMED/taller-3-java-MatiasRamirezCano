@@ -29,7 +29,7 @@ public class TV {
 		return canal;
 	}
 	public void setCanal(int canal) {
-		if (estado == false && canal >= 1 && canal <= 120) {
+		if (estado == true && canal >= 1 && canal <= 120) {
 		    this.canal = canal;
 	    }
 	}
@@ -43,7 +43,7 @@ public class TV {
 		return volumen;	
 	}
 	public void setVolumen(int volumen) {
-		if (estado == false && volumen >= 0 && volumen <= 7) {
+		if (estado == true && volumen >= 0 && volumen <= 7) {
 		    this.volumen = volumen;
 		}
 	}
@@ -62,8 +62,8 @@ public class TV {
 	}
 	
 	public void turnOn() {
-		if (estado == true) {
-			estado = false;
+		if (estado == false) {
+			estado = true;
 		}
 	}
 	public void turnOff() {
@@ -77,23 +77,23 @@ public class TV {
 	}
 	
 	public void canalUp() {
-		if (canal < 120 && this.getEstado() == false) {
+		if (canal < 120 && this.getEstado() == true) {
 			canal++;
 		}
 	}
 	public void canalDown() {
-		if (canal > 1 && this.getEstado() == false) {
+		if (canal > 1 && this.getEstado() == true) {
 		    canal--;
 		}
 	}
 	
 	public void volumenUp() {
-		if (volumen < 7 && this.getEstado() == false) {
+		if (volumen < 7 && this.getEstado() == true) {
 		    volumen++;
 		}
 	}
 	public void volumenDown() {
-		if (volumen > 0 && this.getEstado()== false) {
+		if (volumen > 0 && this.getEstado()== true) {
 		    volumen--;
 		}
 	}
