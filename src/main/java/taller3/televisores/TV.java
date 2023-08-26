@@ -16,7 +16,7 @@ public class TV {
 		canal = 1;
 		volumen = 1;
 		precio = 500;
-		TV.numTV +=1;
+		numTV++;
 	}
 	
 	public Marca getMarca() {
